@@ -11,7 +11,7 @@ export class PostsService {
   }
 
   getAllPosts() {
-    return this.http.get('/posts').pipe(map((posts) => {
+    return this.http.get('/routes/posts').pipe(map((posts) => {
       return posts;
     }));
   }

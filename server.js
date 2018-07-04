@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const posts = require('./server/routes/posts');
+const routes = require('./server/routes/routes');
 
 app.use(express.static(path.join(__dirname, 'dist/ng5')));
 
-app.use('/posts', posts);
+app.use('/routes', routes);
 
 // Catch all other routes, route them to index
 app.get('*', (req, res) => {

@@ -7,15 +7,20 @@ import { PostsComponent } from './posts/posts.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
+import { PostsService } from './posts.service';
+import { ContactComponent } from './contact/contact.component';
+
 const routes = [
   {path: '', redirectTo: 'posts', pathMatch: 'full'},
-  {path: 'posts', component: PostsComponent}
+  {path: 'posts', component: PostsComponent},
+  {path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ const routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

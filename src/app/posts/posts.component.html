@@ -1,3 +1,22 @@
-<p>
-  posts works!
-</p>
+<title>Posts</title>
+
+<table class="table table-dark table-hover mt-5">
+  <thead>
+  <tr>
+    <th>User ID</th>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let post of posts">
+    <td>{{post.userId}}</td>
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary">Posts</button>
